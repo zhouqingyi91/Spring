@@ -17,8 +17,9 @@ public class AddCustomerServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     // 调用业务层（面向接口开发）
-     private CustomerService service = BeanFactory.getCustomerService();
-//    private CustomerService service = (CustomerService) BeanFactory.getBean("customerService");
+//     private CustomerService service = BeanFactory.getCustomerService();
+    // 工厂模式加上配置文件, 解耦, 还能用依赖注入
+    private CustomerService service = (CustomerService) BeanFactory.getBean("customerService");
 
     // 这种实现是将Servlet和Service实现类强耦合在一起了，不利于扩展（开闭原则）
     // private CustomerService service = new CustomerServiceImpl();
@@ -37,11 +38,11 @@ public class AddCustomerServlet extends HttpServlet {
             BeanUtils.populate(customer, parameterMap);
 
             // 第二步：调用业务方法
-            service.addCustomer(customer);
+            String message = service.addCustomer(customer);
 
             // 响应
             response.setContentType("text/html;charset=utf-8");
-            response.getWriter().print("添加成功");
+            response.getWriter().print(message + " OK");
         } catch (Exception e) {
             e.printStackTrace();
         }

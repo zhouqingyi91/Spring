@@ -15,8 +15,8 @@ public class CustomerServiceImpl implements CustomerService {
 	// 解决方案：通过工厂设计模式来解决强耦合和开闭原则的问题
 	// private CustomerDao customerDao = new DbUtilsCustomerDaoImpl();
 	// private CustomerDao customerDao = new JdbcCustomerDaoImpl();
-	 private CustomerDao customerDao = BeanFactory.getCustomerDao();
-//	private CustomerDao customerDao = (CustomerDao) BeanFactory.getBean("customerDao");
+//	 private CustomerDao customerDao = BeanFactory.getCustomerDao();
+	private CustomerDao customerDao = (CustomerDao) BeanFactory.getBean("customerDao");
 
 	// 依赖注入的演示
 	/*
@@ -38,9 +38,9 @@ public class CustomerServiceImpl implements CustomerService {
 
 		Integer line = customerDao.insert(customer);
 		if (line != null && line > 0) {
-			return "添加成功！";
+			return " 添加成功！";
 		} else {
-			return "添加失败！";
+			return " 添加失败！";
 		}
 
 		// 事务或者回滚事务
