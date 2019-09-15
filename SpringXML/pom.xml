@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>SpringXMLAndAnno</artifactId>
+    <artifactId>SpringXML</artifactId>
 
     <dependencies>
         <!-- 持久层依赖 开始 -->
