@@ -1,8 +1,5 @@
 package sourcecode.ioc.xml.po;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Course {
 
 	private String name;
