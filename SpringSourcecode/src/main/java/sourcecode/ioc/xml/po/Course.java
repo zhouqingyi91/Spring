@@ -5,7 +5,7 @@ public class Course {
 	private String name;
 
 	public Course() {
-		System.out.println("course对象被创建");
+		System.out.println("course对象被创建..");
 	}
 
 	public String getName() {
