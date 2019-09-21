@@ -1,5 +1,6 @@
 package sourcecode.ioc.xml.po;
 
+//@Component
 public class Course {
 
 	private String name;

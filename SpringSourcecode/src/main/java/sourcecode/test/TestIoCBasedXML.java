@@ -12,11 +12,14 @@ public class TestIoCBasedXML {
 	@Test
 	public void testInitApplicationContext() throws Exception {
 		@SuppressWarnings("resource")
-		ApplicationContext context = new ClassPathXmlApplicationContext("spring/spring-ioc.xml");
+		ApplicationContext context =
+				new ClassPathXmlApplicationContext("spring/spring-ioc.xml");
 		Student bean2 = (Student) context.getBean("student");
 		System.out.println(bean2);
 		Student bean = (Student) context.getBean("student");
 		System.out.println(bean);
+		System.out.println(bean.getCourse());
+		System.out.println(bean2.getCourse());
 	}
 
 }

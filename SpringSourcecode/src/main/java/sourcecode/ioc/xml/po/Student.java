@@ -1,9 +1,11 @@
 package sourcecode.ioc.xml.po;
 
+//@Component
 public class Student {
 
 	private String name;
 
+//	@Autowired
 	private Course course;
 
 	public Student() {
@@ -21,6 +23,10 @@ public class Student {
 	public void setCourse(Course course) {
 		this.course = course;
 		System.out.println("course对象被注入到student对象里");
+	}
+
+	public Course getCourse() {
+		return course;
 	}
 
 	public void initMethod() {

@@ -7,12 +7,14 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
+	<!--<context:annotation-config></context:annotation-config>-->
 
-	<!-- <context:component-scan base-package="sourcecode.ioc" /> -->
+	<!--<context:component-scan base-package="sourcecode.ioc.xml" />-->
 	<bean id="course" class="sourcecode.ioc.xml.po.Course"></bean>
 	<bean id="student" class="sourcecode.ioc.xml.po.Student"
 	init-method="initMethod" destroy-method="destroyMethod">
 		<property name="name" value="Tony"></property>
 		<property name="course" ref="course"></property>
 	</bean>
+
 </beans>
