@@ -12,6 +12,7 @@
         <module>SpringAnnotationIOC</module>
         <module>SpringXML</module>
         <module>SpringSourcecode</module>
+        <module>SpringMVC</module>
     </modules>
 
     <properties>
