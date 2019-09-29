@@ -48,10 +48,17 @@ public class SpringMVCController {
         Object map = model.get("map");
         return "ok";
     }
+    
+    // URI是唯一的, 重复的会报错
+//    @RequestMapping("test/model/attribute")
+//    public void modelAttribute2(ModelMap model) {
+//        System.out.println("modelAttribute2");
+//    }
 
     @ModelAttribute
     public void map() {
         System.out.println("ModelAttribute in SpringMVCController");
     }
+
 
 }
