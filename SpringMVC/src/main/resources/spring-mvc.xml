@@ -12,13 +12,13 @@
         http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
 	<!-- 配置处理器映射器和处理器适配器 -->
-	<!--<mvc:annotation-driven></mvc:annotation-driven>-->
+	<mvc:annotation-driven></mvc:annotation-driven>
 
 	<!-- 处理器映射器 -->
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />
+	<!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping" />-->
 
 	<!--处理器适配器 -->
-	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />
+	<!--<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter" />-->
 
 	
 	<!--全局拦截器-->
