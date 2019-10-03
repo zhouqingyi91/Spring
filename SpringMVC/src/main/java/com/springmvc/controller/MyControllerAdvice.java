@@ -4,10 +4,6 @@ import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.ModelAttribute;
-
-import java.util.HashMap;
-import java.util.Map;
 
 @ControllerAdvice
 public class MyControllerAdvice {
@@ -15,13 +11,13 @@ public class MyControllerAdvice {
     /**
      * 应用到所有@RequestMapping注解方法，在其执行之前把返回值放入ModelMap中
      */
-    @ModelAttribute
-    public Map<String, Object> map() {
-        System.out.println("ModelAttribute in MyControllerAdvice");
-        Map<String, Object> map = new HashMap<>();
-        map.put("name", "tom");
-        return map;
-    }
+//    @ModelAttribute
+//    public Map<String, Object> map() {
+//        System.out.println("ModelAttribute in MyControllerAdvice");
+//        Map<String, Object> map = new HashMap<>();
+//        map.put("name", "tom");
+//        return map;
+//    }
 
     /**
      * 应用到所有【带参数】的@RequestMapping注解方法，在其执行之前初始化数据绑定器
