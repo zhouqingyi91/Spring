@@ -22,9 +22,9 @@
 
 	
 	<!--全局拦截器-->
-	<!--<mvc:interceptors>-->
-		<!--<bean class="com.springmvc.controller.MySpringMVCInterceptor"/>-->
-	<!--</mvc:interceptors>-->
+	<mvc:interceptors>
+		<bean class="com.springmvc.controller.MySpringMVCInterceptor"/>
+	</mvc:interceptors>
 
 	<!--视图解析器-->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
