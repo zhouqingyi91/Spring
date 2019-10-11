@@ -1,5 +1,7 @@
 package sourcecode.aop.advice;
 
+import org.aspectj.lang.ProceedingJoinPoint;
+
 /**
  * 编写通知类
  * @author 怡吾宇
@@ -30,7 +32,7 @@ public class MyAdvice {
 	 * @param joinPoint
 	 * @throws Throwable
 	 */
-	/*public void aroud(ProceedingJoinPoint joinPoint)  {
+	public void aroud(ProceedingJoinPoint joinPoint)  {
 		System.out.println("环绕通知---前置通知");
 		//调用目标对象的方法
 		try {
@@ -43,5 +45,5 @@ public class MyAdvice {
 		}finally {
 			System.out.println("环绕通知---最终通知");
 		}
-	}*/
+	}
 }

@@ -19,9 +19,5 @@ public class TestAOP {
 	@Test
 	public void test() {
 		userService.saveUser();
-		System.out.println("=================");
-		userService.saveUser("lisi");
-		System.out.println("=================");
-		userService.updateUser();
 	}
 }
