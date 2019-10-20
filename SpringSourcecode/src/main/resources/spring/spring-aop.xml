@@ -22,7 +22,6 @@
 			<aop:pointcut id="userServiceImpl"
 						  expression="execution(* sourcecode.aop.target.UserServiceImpl.*(..))"/>
 			<aop:after method="after" pointcut-ref="userServiceImpl"/>
-			<aop:after-returning method="afterReturing" pointcut-ref="userServiceImpl"/>
 			<aop:around method="aroud" pointcut-ref="userServiceImpl"/>
 			<aop:before method="before" pointcut-ref="userServiceImpl" />
 		</aop:aspect>
